@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 interface ButtonProps {
   text: string
@@ -6,7 +6,11 @@ interface ButtonProps {
 }
 
 const Button = ({ text, sourceFile }: ButtonProps): JSX.Element => {
-  const [audio] = useState(new Audio(sourceFile))
+  const [audio, setAudio] = useState(new Audio())
+
+  useEffect(() => {
+    setAudio(new Audio(sourceFile))
+  }, [])
 
   const play = () => {
     audio.play()
