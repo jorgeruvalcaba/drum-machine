@@ -4,7 +4,7 @@ import Button from "./button"
 
 import "./drumcontainer.css"
 
-const DrumContainer: React.SFC = () => {
+const DrumContainer = (): JSX.Element => {
   return (
     <div className="DrumContainer shadow-lg p-4 w-full">
       <div className="flex flex-row justify-center">

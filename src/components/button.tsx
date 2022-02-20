@@ -5,10 +5,7 @@ interface ButtonProps {
   sourceFile: string
 }
 
-const Button: React.FunctionComponent<ButtonProps> = ({
-  text,
-  sourceFile,
-}: ButtonProps) => {
+const Button = ({ text, sourceFile }: ButtonProps): JSX.Element => {
   const [audio] = useState(new Audio(sourceFile))
 
   const play = () => {
