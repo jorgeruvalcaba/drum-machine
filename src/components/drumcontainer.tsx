@@ -2,11 +2,9 @@ import React from "react"
 
 import Button from "./button"
 
-import "./drumcontainer.css"
-
-const DrumContainer = (): JSX.Element => {
+const DrumContainer = () => {
   return (
-    <div className="DrumContainer shadow-lg p-4 w-full">
+    <div className="max-w-md bg-white shadow-lg p-4 w-full">
       <div className="flex flex-row justify-center">
         <Button
           text="Q"

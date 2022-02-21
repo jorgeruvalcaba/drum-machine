@@ -6,14 +6,14 @@ interface ButtonProps {
 }
 
 const Button = ({ text, sourceFile }: ButtonProps): JSX.Element => {
-  const [audio, setAudio] = useState(new Audio())
+  const [audio, setAudio] = useState<HTMLAudioElement>()
 
   useEffect(() => {
     setAudio(new Audio(sourceFile))
   }, [])
 
   const play = () => {
-    audio.play()
+    if (audio) audio.play()
   }
 
   return (
